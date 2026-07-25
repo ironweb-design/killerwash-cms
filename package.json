@@ -1,0 +1,12 @@
+{
+  "name": "killerwash-cms",
+  "version": "1.0.0",
+  "description": "Killer Wash site with Decap CMS (Eleventy build)",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

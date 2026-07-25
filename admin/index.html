@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit My Site</title>
+
+    <style>
+      /* =====================================================================
+         IRONWEB — smooth navy background, SAFE version.
+         Lesson learned: aggressive card/focus overrides broke the image
+         picker and overflowed the collection card. This version ONLY paints
+         the background and leaves Decap's components (cards, buttons,
+         focus states, media picker) working exactly as built.
+         Delete this <style> block to revert entirely.
+         ===================================================================== */
+
+      /* One background layer on <body>, fixed so it never seams. */
+      body{
+        background:
+          radial-gradient(150% 100% at 50% 118%, rgba(79,156,249,0.14), rgba(79,156,249,0) 60%),
+          #081527 !important;
+        background-attachment: fixed !important;
+      }
+
+      /* Only the large empty layout wrappers go transparent so the one
+         background shows through. We do NOT touch cards, buttons, inputs,
+         focus states, or the media library — those keep Decap's defaults so
+         everything stays functional. */
+      #nc-root,
+      #nc-root > div:first-child,
+      [class*="AppMainContainer"],
+      [class*="AppWrapper"],
+      [class*="AppMain"]{
+        background: transparent !important;
+      }
+
+      /* Login button -> brand blue (login screen only). */
+      #nc-root form button{
+        background:#4f9cf9 !important; color:#04213f !important;
+        font-weight:800 !important; border:none !important; border-radius:12px !important;
+        box-shadow:0 10px 30px rgba(79,156,249,0.4) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
+</html>

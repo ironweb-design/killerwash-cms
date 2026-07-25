@@ -1,0 +1,96 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Run the CMS locally without logging in (reads/writes your local files).
+# Comment these two lines out before deploying.
+#local_backend:
+  #url: http://localhost:8081/api/v1
+
+# Your logo on the login screen and top bar
+logo_url: /admin/ironweb-logo.png
+
+media_folder: "src/images"
+public_folder: "/"
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "Edit Your Site"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Business Info"
+            name: "business"
+            widget: "object"
+            fields:
+              - { label: "Phone (digits only, no dashes)", name: "phone_digits", widget: "string", hint: "Example: 2819228245" }
+              - { label: "Phone (shown on the site)", name: "phone_display", widget: "string", hint: "Example: 281-922-8245" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Serving area", name: "serving", widget: "string" }
+              - { label: "Hours", name: "hours", widget: "string" }
+              - { label: "Quote starting price (number only)", name: "quote_start", widget: "string" }
+
+          - label: "Prices"
+            name: "prices"
+            widget: "object"
+            fields:
+              - label: "Trash Bin Washing"
+                name: "trashbin"
+                widget: "object"
+                fields:
+                  - { label: "Per bin ($)", name: "per_bin", widget: "string" }
+                  - { label: "Monthly service, per bin ($)", name: "monthly", widget: "string" }
+              - label: "Car Wash"
+                name: "carwash"
+                widget: "object"
+                fields:
+                  - { label: "Sedan ($)", name: "sedan", widget: "string" }
+                  - { label: "Midsize SUV ($)", name: "midsize_suv", widget: "string" }
+                  - { label: "Full-size SUV ($)", name: "fullsize_suv", widget: "string" }
+                  - { label: "Truck ($)", name: "truck", widget: "string" }
+                  - { label: "Large truck ($)", name: "large_truck", widget: "string" }
+
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            hint: "Replace any photo. Upload a new image and it swaps on the site. Keep a similar shape (wide photos for headers, roughly square for before/after) so the layout stays clean."
+            fields:
+              - { label: "Hero background (desktop)", name: "hero", widget: "image" }
+              - { label: "Hero background (mobile)", name: "hero_mobile", widget: "image" }
+              - { label: "Services page header", name: "services_header", widget: "image" }
+              - { label: "Results page header", name: "results_header", widget: "image" }
+              - { label: "Trash bin photo", name: "trashbins", widget: "image" }
+              - { label: "Car wash photo", name: "carwash", widget: "image" }
+              - { label: "Soft wash photo", name: "softwash", widget: "image" }
+              - { label: "Deep pressure wash photo", name: "pressuresurface", widget: "image" }
+              - { label: "Before/after 1 - Before", name: "before_1", widget: "image" }
+              - { label: "Before/after 1 - After", name: "after_1", widget: "image" }
+              - { label: "Before/after 2 - Before", name: "before_2", widget: "image" }
+              - { label: "Before/after 2 - After", name: "after_2", widget: "image" }
+              - { label: "Before/after 3 - Before", name: "before_3", widget: "image" }
+              - { label: "Before/after 3 - After", name: "after_3", widget: "image" }
+
+          - label: "Reviews"
+            name: "reviews"
+            widget: "object"
+            fields:
+              - label: "Google Reviews"
+                name: "google"
+                widget: "list"
+                fields:
+                  - { label: "Stars (1 to 5)", name: "stars", widget: "number", default: 5, min: 1, max: 5 }
+                  - { label: "Review text", name: "text", widget: "text" }
+                  - { label: "Reviewer name", name: "name", widget: "string" }
+                  - { label: "Label under name", name: "source", widget: "string", default: "Google review" }
+              - label: "Facebook Reviews"
+                name: "facebook"
+                widget: "list"
+                fields:
+                  - { label: "Stars (1 to 5)", name: "stars", widget: "number", default: 5, min: 1, max: 5 }
+                  - { label: "Review text", name: "text", widget: "text" }
+                  - { label: "Reviewer name", name: "name", widget: "string" }
+                  - { label: "Label under name", name: "source", widget: "string", default: "Katy, TX" }

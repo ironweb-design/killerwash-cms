@@ -1,0 +1,81 @@
+{
+  "business": {
+    "phone_digits": "2819228245",
+    "phone_display": "281-922-8245",
+    "email": "Killer.powerwash@gmail.com",
+    "serving": "Katy & Cinco Ranch, TX",
+    "hours": "Mon to Sun, 8am to 6pm",
+    "quote_start": "99"
+  },
+  "prices": {
+    "trashbin": {
+      "per_bin": "25",
+      "monthly": "20"
+    },
+    "carwash": {
+      "sedan": "50",
+      "midsize_suv": "60",
+      "fullsize_suv": "75",
+      "truck": "90",
+      "large_truck": "100"
+    }
+  },
+  "reviews": {
+    "google": [
+      {
+        "stars": 5,
+        "text": "I am shocked how ugly my driveway was!! We've been on the market trying to sell and thought we should bump up the curb appeal. Luckily Sebastian had come by and offered his services. Best thing we could have done! He was fast, it was super affordable, and my house looks 1000x better now. I'd definitely hire again, thank you!",
+        "name": "0xCrown",
+        "source": "Google review"
+      },
+      {
+        "stars": 5,
+        "text": "Sebastian did such a great job! My driveway was in desperate need of cleaning and now my house looks new, love it!",
+        "name": "Jeimy Martinez",
+        "source": "Google review"
+      },
+      {
+        "stars": 5,
+        "text": "Sebastian did a great job and was very reasonably priced. Highly recommend.",
+        "name": "Sue T",
+        "source": "Google review"
+      }
+    ],
+    "facebook": [
+      {
+        "stars": 5,
+        "text": "Sebastian is fantastic to work with! Took care of my driveway and fencing, they look pristine now. Even my neighbors came out and were impressed. He responded very fast and very reasonable pricing. Will be using again!",
+        "name": "Shelby Hensley",
+        "source": "Katy, TX"
+      },
+      {
+        "stars": 5,
+        "text": "Such a great experience, cleaned my driveway up for only $120! He was quick and efficient, will definitely rehire him when I need another service.",
+        "name": "Martin Sanchez",
+        "source": "Katy, TX"
+      },
+      {
+        "stars": 5,
+        "text": "Had a great experience with this company! Cleaned my driveway so well it made my house look brand new",
+        "name": "Alisson Martinez",
+        "source": "Katy, TX"
+      }
+    ]
+  },
+  "images": {
+    "trashbins": "/trashbins.jpg",
+    "hero_mobile": "/mobile-hero.png",
+    "pressuresurface": "/pressuresurface.png",
+    "softwash": "/softwash.jpg",
+    "services_header": "/services_headline.jpg",
+    "after_1": "/after-1.jpg",
+    "after_2": "/after-2.jpg",
+    "after_3": "/after-3.jpg",
+    "before_1": "/before-1.jpg",
+    "before_2": "/before-2.jpg",
+    "carwash": "/carwash.jpg",
+    "before_3": "/before-3.jpg",
+    "results_header": "/results_headline.jpg",
+    "hero": "/Hero-background.png"
+  }
+}
