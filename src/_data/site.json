@@ -9,7 +9,7 @@
   },
   "prices": {
     "trashbin": {
-      "per_bin": "25",
+      "per_bin": "35",
       "monthly": "20"
     },
     "carwash": {
